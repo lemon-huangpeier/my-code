@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title> CSS3背景应用（大屏和多图自适应）</title>
+	<style>
+	*{
+		margin:0;
+		padding: 0;
+	}
+	.box1{
+		width: 100%;
+        height: 1000px;
+        overflow:hidden;
+        border:1px solid #ccc;
+        background: url(images/head.jpg) no-repeat;
+        background-size:cover;
+        -webkit-background-size:cover ;
+        -o-background:cover ;
+        background-attachment: fixed;
+      /*  background-attachment: scroll;*/
+      background-position: center 0;
+        	
+	}
+	.box2{
+		width: 100%;
+        height: 1000px;
+        overflow:hidden;
+        border:1px solid #ccc;
+        background: url(images/foot.jpg) no-repeat;
+        background-size:cover;
+        -webkit-background-size:cover ;
+        -o-background:cover ;
+        background-attachment: fixed;
+         background-position: center 0;
+    }
+
+	</style>
+	</head>
+<body>
+	<div  class="box1"></div>
+	<div  class="box2">
+     <p> 前端是新时代的职业，新时代的职业特点就是多元化，多面化。先说能力，以下是我认为的，身为一个前端应该具备的能力：首先身为前端初学者，你必须要具备的核心能力是HTML、CSS、Javascript、jQuery。这四项是最底层的技术支持，在这之后PhotoShop也是应该掌握的技能之一（ps不一定要去做，但是一定要会）。然后是成长阶段，前端开发工匠，需要掌握插件的调用，你要知道不同的图片格式，浏览器的兼容性，移动端和pc端区别，响应式布局,flex布局，栅格化布局，同时要注意对设计审美的提升，同时开始选择一种主流框架进行学习Vue，React，Angular等（需要多看别人写的代码，同时不断阅读大量的技术文献，基础很重要）。在之后是深度提升，前端开发员，这个阶段你要逐渐适应自己设计页面，页面交互，兼容性问题（当然没必要工作中你亲自去做，但是你要有这个能力），如果觉得精力足够，向着SVG，Canvas，WebGL发展也不错，当然还有NodeJS（这个是通向全栈的道路）。前端开发工程师，这个阶段你可以完全通过JavaScript打通前后端，自行设计网页，交互，后台，数据库，当你有了这么多能力，你已经可以称为一个全栈工程师了。
+</p>
+	</div>
+	</body>
+</html>
