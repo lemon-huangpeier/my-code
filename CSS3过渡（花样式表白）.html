@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>04 CSS3过渡（花样告白）</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #4993eb;
+        }
+
+        .top {
+            position: relative;
+            top: 50px;
+            left: 200px;
+        }
+
+        .top .heart {
+            position: absolute;
+            top: 120px;
+            left: 50px;
+            width: 150px;
+            height: 150px;
+            background-color: #ff0582;
+            transform: rotate(225deg);
+
+        }
+
+        .top .heart:before {
+            content: "";
+            position: absolute;
+            top: 70px;
+            left: -9px;
+            width: 200px;
+            height: 200px;
+            border-radius: 100% 70%;
+            transform: rotate(-40deg);
+            background-color: #ff0582;
+            color: #ffff24;
+            font:normal 20px "微软雅黑" ;
+        }
+
+        .top .heart:after {
+            content: "";
+            position: absolute;
+            top: -9px;
+            left: 70px;
+            width: 200px;
+            height: 200px;
+            border-radius: 100% 70%;
+            transform: rotate(40deg);
+            background-color: #ff0582;
+            color: #ffff24;
+            font:normal 20px "微软雅黑" ;
+        }
+        .top .heart p:nth-child(1){
+            position: absolute;
+            bottom: 54px;
+            right: -103px;
+            z-index: 7;
+            transform: rotate(90deg);
+            color: #ffff24;
+            font:normal 20px "微软雅黑" ;
+        }
+        .top .heart p:nth-child(2){
+            color: #ffff24;
+            font:normal 20px "微软雅黑" ;
+            z-index: 7;
+            transform: rotate(180deg);
+            position: absolute;
+            bottom: -79px;
+            right: 27px;
+        }
+        .top .box {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            writing-mode: vertical-lr;
+            writing-mode: tb-lr;
+            position: absolute;
+            left: 800px;
+        }
+
+        .top .box img {
+            position: absolute;
+            transition: alls;
+        }
+
+        .top .box:hover img {
+            transform: rotateY(180deg);
+            transition: 0.6s;
+
+        }
+
+        .top .box .box1 img {
+            z-index: 9;
+            backface-visibility: hidden;
+        }
+        .top .box .box2 img {
+            transform-origin: (180deg);
+        }
+
+        .items {
+            margin: 0 auto;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            position: absolute;
+            top: 450px;
+            left: 130px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .items img {
+            width: 230px;
+            cursor: pointer;
+        }
+
+        .items .item {
+            margin-left: 20px;
+            width: 230px;
+            height: 300px;
+            background-color: #fff;
+            font-size: 18px;
+        }
+
+        .items .item:not(:first-child) {
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            transition: all 1s;
+        }
+
+        .items .item:not(:first-child):hover {
+            background-color: #ff5801;
+            cursor: pointer;
+            transform:translate(0,-50px);
+
+        }
+
+        .items .item .desc {
+            text-overflow: ellipsis;
+            white-space: nowrap; 
+            transition: all 1s;
+        }
+
+        .items .item .desc:hover {
+            overflow: visible;
+            white-space: normal;
+            word-break: break-all;
+            transform:translate(0,40px);
+
+           
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <div class="heart">
+            <p>吴丹纯</p>
+            <p>喜欢你</p>
+        </div>
+        <div class="box3"></div>
+        <div class="box">
+            <div class="box1"><img src="./images/bg1.png" alt=""></div>
+            <div class="box2"><img src="./images/bg2.png" alt=""></div>
+        </div>
+    </div>
+
+    <div class="items">
+        <div class="item">
+            <img src="./images/1.jpg" alt="">
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/2.png" alt="">
+            </div>
+            <div class="desc">有句话悄悄说</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/3.png" alt="">
+            </div>
+            <div class="desc">你的样子最可爱</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/4.png" alt="">
+            </div>
+            <div class="desc">喜欢的就是你</div>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="./images/5.png" alt="">
+            </div>
+            <div class="desc">期限是一万年</div>
+        </div>
+    </div>
+</body>
+
+</html>
