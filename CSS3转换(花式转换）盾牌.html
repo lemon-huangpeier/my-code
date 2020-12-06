@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>07+CSS3转换(花式转换）盾牌</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	
+	body{
+		background-color: #05984a;
+	}
+	.sheield{
+        width: 400px;
+        height: 400px;
+        margin:100px auto;
+        position: relative;
+	}
+	.box,.box2,.box3,.box4,.box5,.box5,.box7,.box8,.box9{
+        transition:all 2s;
+	}
+	.box1{
+		background:url(images/shield_1_01.png);
+		width: 113px;
+		height: 150px;
+		position:absolute;
+		left:400px;
+		top:0px;
+		transition: transform 1s;
+		transform: rotateZ(120deg);
+		background-size: 70%;
+		background-repeat: no-repeat;
+		/*transition: all 2s;*/
+	}
+	.box2{
+		background:url(images/shield_1_02.png);
+		width: 178px;
+		height: 150px;
+		position:absolute;
+		left:350px;
+		top:200px;
+		transition: transform 1s;
+		transform: rotateZ(30deg);
+		background-size: 70%;
+		background-repeat: no-repeat;
+		/*transition: all 2s linear;*/
+	}
+
+	.box3{
+		background:url(images/shield_1_03.png);
+		width: 117px;
+		height: 150px;
+		position:absolute;
+		left:950px;
+		top:10px;
+		transition: transform 1s;
+		transform: rotateZ(30deg);
+		background-size: 70%;
+		background-repeat: no-repeat;
+	}
+	.box4{
+		background:url(images/shield_1_04.png);
+		width: 113px;
+		height: 178px;
+		position:absolute;
+		left:652px;
+		top:50px;
+		transition: transform 1s;
+		transform: rotateZ(-10deg);
+		background-size: 70%;
+		background-repeat: no-repeat;
+	}
+	.box5{
+		background:url(images/shield_1_05.png);
+		width: 178px;
+		height: 178px;
+		position:absolute;
+		left:590px;
+		top:207px;	
+		background-size: 70%;
+		background-repeat: no-repeat;			
+	}
+	.box6{
+		background:url(images/shield_1_06.png);
+		width: 113px;
+		height: 154px;
+		position:absolute;
+		left:717px;
+		top:207px;
+		background-size: 73%;
+		background-repeat: no-repeat;				
+	}
+	.box7{
+		background:url(images/shield_1_07.png);
+		width: 113px;
+		height: 154px;
+		position:absolute;
+		left:510px;
+		top:334px;
+		background-size: 70%;
+		background-repeat: no-repeat;				
+	}
+	.box8{
+		background:url(images/shield_1_08.png);
+		width: 178px;
+		height: 154px;
+		position:absolute;
+		left:590px;
+		top:335px;
+		background-size: 70%;
+		background-repeat: no-repeat;				
+	}
+	.box9{
+		background:url(images/shield_1_09.png);
+		width: 178px;
+		height: 154px;
+		position:absolute;
+		left:717px;
+		top:335px;
+		background-size: 45%;
+		background-repeat: no-repeat;				
+	}
+	.shield:hover .box1{
+        transform: translate(110px,100px) rotate(0deg);        
+	}
+	.shield:hover .box2{
+        transform: translate(240px,-100px) rotate(0deg);        
+	}
+	.shield:hover .box3{
+        transform: translate(-233px,90px) rotate(0deg);        
+	}
+	.shield:hover .box4{
+        transform: translate(-142px,157px) rotate(0deg);        
+	}
+	.shield:hover .box5{
+        transform: translate(0) rotate(0deg);        
+	}
+    .shield:hover .box5{
+        transform: translate(0) rotate(0deg);        
+	}
+	.shield:hover .box6{
+        transform: translate(0) rotate(0deg);        
+	}
+	.shield:hover .box7{
+        transform: translate(0) rotate(0deg);        
+	}
+	.shield:hover .box8{
+        transform: translate(0) rotate(0deg);        
+	}
+	.shield:hover .box9{
+        transform: translate(0) rotate(0deg);        
+	}
+
+
+
+
+
+
+</style>
+
+</head>
+<body>
+	<div class="shield">
+		<div class="box1" ></div>
+	    <div class="box2" ></div>
+	    <div class="box3" ></div>
+	    <div class="box4" ></div>
+	    <div class="box5" ></div>
+	    <div class="box6" ></div>
+	    <div class="box7" ></div>
+	    <div class="box8" ></div>
+	    <div class="box9" ></div>
+	</div>
+</body>
+</html>
