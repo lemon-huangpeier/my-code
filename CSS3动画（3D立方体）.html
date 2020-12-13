@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>3D立方体</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	    body{
+	    	overflow: hidden;	
+	    }
+		div.box{ /*父盒子样式*/
+			width: 300px;
+			height: 300px;
+			margin: 200px auto;
+			font-size: 50px;
+			color:yellow;
+			text-align: center;
+			line-height: 300px;
+			position:relative;
+			transform-style: preserve-3d; /*添加3D视角*/
+			transform:rotateX(30deg) rotateY(-30deg);/*翻转前的参考视角*/
+			-webkit-animation:rotate 8s infinite;
+			-o-animation:rotate 8s  infinite 0%;
+		}
+		
+		.box>div{/*子盒子样式*/
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			border: 1px solid #000;
+			text-align: center;
+			}
+
+		
+		.up{
+			background-color: rgba(178,124,201,0.7);
+			transform: rotateX(-98deg) rotateY(-9deg) rotateZ(49deg)
+			translateX(-131px) translateY(-526px) translateZ(-4px);  
+		}
+		.down{
+			background-color: rgba(201,255,178,0.5);
+			transform:rotateX(-107deg)  rotateZ(49deg) rotateY(-13deg)
+			translateY(338px)  translateZ(-47px)  translateX(173px);
+		}
+		.right{
+			background-color: rgba(178,255,124,0.7);
+			transform:rotateX(-44deg)  rotateZ(22deg) rotateY(92deg)
+			translateY(111px)  translateZ(38px)  translateX(476px);
+		}
+		.left{
+			background-color: rgba(255,201,124,0.5);
+			transform:rotateX(-46deg)  rotateZ(23deg) rotateY(89deg)
+			translateY(34px)  translateZ(-202px)  translateX(282px);
+		}
+		.forward{
+			background-color: rgba(255,255,124,0.5);
+			transform:rotateY(50deg)
+			translateX(35px)  translateZ(193px);  
+		}
+		.backward{
+			background-color: rgba(255,255,255,0.1);
+			transform:rotateY(50deg);
+			} 
+			
+			@keyframes rot {
+
+			0% {
+				-webkit-transform: rotate(360deg) ;
+
+			}
+
+			25% {
+				-webkit-transform: rotate(270deg) ;
+			}
+
+			50% {
+				-webkit-transform: rotate(180deg) ;
+			}
+
+			75% {
+				-webkit-transform: rotate(90deg) ;
+			}
+
+			100% {
+				-webkit-transform: rotate(0deg) ;
+			}
+
+		}
+
+		.box1 {
+			animation: rot 2s linear infinite;
+		}
+		
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="box1">
+	<div class="box">
+	<div class="up">上</div>
+	<div class="down">下</div>
+	<div class="left">左</div>
+	<div class="right">右</div>
+	<div class="forward">前</div>
+	<div class="backward">后</div>
+	</div>
+	</div>
+</body>
+</html>
